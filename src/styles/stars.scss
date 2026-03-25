@@ -1,0 +1,41 @@
+.stars {
+  position: relative;
+  width: 100px;
+  height: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/star-empty.svg');
+    background-repeat: repeat-x;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/star.svg');
+    background-repeat: repeat-x;
+  }
+
+  &--1::after {
+    width: 20%;
+  }
+
+  &--2::after {
+    width: 40%;
+  }
+
+  &--3::after {
+    width: 60%;
+  }
+
+  &--4::after {
+    width: 80%;
+  }
+
+  &--5::after {
+    width: 100%;
+  }
+}
