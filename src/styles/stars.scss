@@ -2,33 +2,25 @@
 
 .stars {
   display: flex;
-  gap: $star-gap;
 
-  &__item {
-    width: $star-size;
-    height: $star-size;
-    background-image: url('../images/star.svg');
-    background-size: contain;
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star-empty.svg');
     background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
-  &--0 &__item {
-    background-image: url('../images/star-empty.svg');
-  }
-
-  &--1 &__item:nth-child(n + 2) {
-    background-image: url('../images/star-empty.svg');
-  }
-
-  &--2 &__item:nth-child(n + 3) {
-    background-image: url('../images/star-empty.svg');
-  }
-
-  &--3 &__item:nth-child(n + 4) {
-    background-image: url('../images/star-empty.svg');
-  }
-
-  &--4 &__item:nth-child(n + 5) {
-    background-image: url('../images/star-empty.svg');
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star.svg');
   }
 }
